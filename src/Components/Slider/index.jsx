@@ -11,8 +11,6 @@ import img6 from "../../assets/images/returnjedi.png";
 import styled from "styled-components";
 import { getData } from "../../api/api";
 
-const Container = styled.div``;
-
 const BoxConteudo = styled.div`
   position: absolute;
   left: 10%;
@@ -68,7 +66,7 @@ const Botao = styled.button`
   margin: 46px auto 0 auto;
   font-family: "Urbanist", sans-serif;
   border-radius: 20px;
-  background-color: gold;
+  background-color: ${({ theme }) => theme.button};
   border: none;
   color: black;
   text-transform: uppercase;
@@ -85,6 +83,7 @@ const Botao = styled.button`
 
 const Slider = () => {
   const [filmes, setFilmes] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(0);
   const images = { 1: img1, 2: img2, 3: img3, 4: img4, 5: img5, 6: img6 };
 
   const changeOrdem = (ordem) => {
@@ -99,7 +98,7 @@ const Slider = () => {
     }
 
     setFilmes([...filmesOrdenados]);
-    console.log(filmesOrdenados);
+    setSelectedItem(selectedItem + 1);
   };
 
   useEffect(() => {
@@ -107,47 +106,50 @@ const Slider = () => {
   }, []);
 
   return (
-    <Container>
-      <Carousel dynamicHeight showThumbs={false} showStatus={false}>
-        <div>
+    <Carousel
+      dynamicHeight
+      showThumbs={false}
+      showStatus={false}
+      selectedItem={selectedItem}
+      onChange={(index) => setSelectedItem(index)}
+    >
+      <div>
+        <BoxConteudo>
+          <Titulo>Filmoteca Star Wars</Titulo>
+          <Texto>
+            Seja bem vindo ao maior acervo de filmes da obra maxima de George
+            Lucas!
+          </Texto>
+          <Texto>
+            Aqui voce encontrara tudo sobre uma das maiores franquias do cinema!
+          </Texto>
+          <Texto>
+            Vamos comecar?
+            <br />
+            Selecione abaixo a ordem em que deseja exibir os filmes:
+          </Texto>
+          <Botao
+            onClick={() => changeOrdem("cronologica")}
+            style={{ marginRight: "25px" }}
+          >
+            - Ordem Cronologica -
+          </Botao>
+          <Botao onClick={() => changeOrdem("lancamento")}>
+            - Ordem de Lancamento-
+          </Botao>
+        </BoxConteudo>
+        <Image src={imgCapa} alt="" />
+      </div>
+      {filmes.map((filme, key) => (
+        <div key={key}>
           <BoxConteudo>
-            <Titulo>Filmoteca Star Wars</Titulo>
-            <Texto>
-              Seja bem vindo ao maior acervo de filmes da obra maxima de George
-              Lucas!
-            </Texto>
-            <Texto>
-              Aqui voce encontrara tudo sobre uma das maiores franquias do
-              cinema!
-            </Texto>
-            <Texto>
-              Vamos comecar?
-              <br />
-              Selecione abaixo a ordem em que deseja exibir os filmes:
-            </Texto>
-            <Botao
-              onClick={() => changeOrdem("cronologica")}
-              style={{ marginRight: "25px" }}
-            >
-              - Ordem Cronologica -
-            </Botao>
-            <Botao onClick={() => changeOrdem("lancamento")}>
-              - Ordem de Lancamento-
-            </Botao>
+            <Titulo>{filme.title}</Titulo>
+            <Texto>{filme.opening_crawl}</Texto>
           </BoxConteudo>
-          <Image src={imgCapa} alt="" />
+          <Image src={images[filme.episode_id]} alt="" />
         </div>
-        {filmes.map((filme, key) => (
-          <div key={key}>
-            <BoxConteudo>
-              <Titulo>{filme.title}</Titulo>
-              <Texto>{filme.opening_crawl}</Texto>
-            </BoxConteudo>
-            <Image src={images[filme.episode_id]} alt="" />
-          </div>
-        ))}
-      </Carousel>
-    </Container>
+      ))}
+    </Carousel>
   );
 };
 

@@ -51,7 +51,9 @@ const Switch = styled.img`
 const Cabecalho = ({ toggleTema }) => {
   return (
     <StyledHeader>
-      <Logo src={imgLogo} alt="Star Wars Movies" title="Star Wars Movies" />
+      <a href="/">
+        <Logo src={imgLogo} alt="Star Wars Movies" title="Star Wars Movies" />
+      </a>
       <Switch src={imgSwitch} onClick={toggleTema} />
     </StyledHeader>
   );
