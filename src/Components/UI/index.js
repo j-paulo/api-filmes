@@ -19,7 +19,6 @@ export const Titulo = styled.h1`
   font-size: 2.7vw;
   margin-bottom: 2%;
   text-transform: uppercase;
-  font-family: "Urbanist", sans-serif;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
 
   @media (max-width: 425px) {
@@ -29,7 +28,6 @@ export const Titulo = styled.h1`
 `;
 
 export const Texto = styled.p`
-  font-family: "Urbanist", sans-serif;
   font-size: 1.4vw;
   line-height: 2vw;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
