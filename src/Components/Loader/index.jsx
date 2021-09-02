@@ -14,7 +14,11 @@ const Spinner = styled(HalfCircleSpinner)`
 `;
 
 const Loader = () => {
-  return <Spinner />;
+  return (
+    <div data-testid="spinner">
+      <Spinner />
+    </div>
+  );
 };
 
 export default Loader;

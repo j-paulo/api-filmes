@@ -52,9 +52,13 @@ const Cabecalho = ({ toggleTema }) => {
   return (
     <StyledHeader>
       <a href="/">
-        <Logo src={imgLogo} alt="Star Wars Movies" title="Star Wars Movies" />
+        <Logo
+          src={imgLogo}
+          alt="Filmoteca Star Wars"
+          title="Filmoteca Star Wars"
+        />
       </a>
-      <Switch src={imgSwitch} onClick={toggleTema} />
+      <Switch data-testid="switch" src={imgSwitch} onClick={toggleTema} />
     </StyledHeader>
   );
 };

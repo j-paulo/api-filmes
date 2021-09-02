@@ -13,7 +13,7 @@ import imgMobile5 from "../../assets/images/empirestrikesbackmobile.jpg";
 import img6 from "../../assets/images/returnjedi.png";
 import imgMobile6 from "../../assets/images/returnjedimobile.jpg";
 import styled from "styled-components";
-import { format } from "date-fns/esm";
+import { format } from "date-fns";
 
 const BoxInfo = styled(BoxConteudo)`
   left: inherit;
@@ -27,6 +27,8 @@ const BoxInfo = styled(BoxConteudo)`
 
   @media (max-width: 425px) {
     top: ${(props) => (props.mostrar ? "12%" : "-30%")};
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     width: 100%;
     opacity: 92%;
     background: ${({ theme }) => theme.infosBgMobile};

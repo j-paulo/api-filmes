@@ -14,14 +14,14 @@
     "react-promise-tracker": "^2.1.0",
     "react-responsive-carousel": "^3.2.21",
     "react-scripts": "4.0.3",
-    "styled-components": "^5.3.0",
+    "styled-components": "^5.3.1",
     "styled-reset": "^4.3.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll --detectOpenHandles",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

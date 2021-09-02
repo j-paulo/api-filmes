@@ -4,13 +4,8 @@ const api = axios.create({
   baseURL: "https://swapi.dev/api/",
 });
 
-export const getFilms = async (url, setFilms) => {
-  try {
-    const resposta = await api.get(url);
-    const data = resposta.data;
+export const fetchFilmes = async (url = "films") => {
+  const resposta = await api.get(url);
 
-    setFilms(data.results);
-  } catch (error) {
-    console.error(error);
-  }
+  return resposta.data;
 };
