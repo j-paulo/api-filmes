@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente de Conteudo dos Filmes O snapshot do componente sera sempre o mesmo 1`] = `
+<div>
+  <div
+    class="sc-bdfBQB iqGwor"
+  >
+    <h1
+      class="sc-gsTEea bMRqBP"
+    >
+      teste
+    </h1>
+    <p
+      class="sc-dlfnuX cSnlMk"
+    >
+      star
+    </p>
+    <button
+      class="sc-hKgJUU sc-iBPTik hLjuup yFKxa"
+    >
+      - Mais infos -
+    </button>
+  </div>
+  <div
+    class="sc-bdfBQB sc-jSgvzq iqGwor kUZHzP"
+  >
+    <span
+      class="sc-gKseQn jmSvDS"
+    >
+      Diretor: 
+      <font>
+        stevie
+      </font>
+    </span>
+    <br />
+    <span
+      class="sc-gKseQn jmSvDS"
+    >
+      Produtor: 
+      <font>
+        Loki
+      </font>
+    </span>
+    <br />
+    <span
+      class="sc-gKseQn jmSvDS"
+    >
+      Data de lancamento: 
+      <font>
+        24/05/1977
+      </font>
+    </span>
+    <br />
+  </div>
+  <img
+    alt=""
+    class="sc-eCstlR fbOgtV desk"
+  />
+  <img
+    alt=""
+    class="sc-eCstlR fbOgtV mobile"
+  />
+</div>
+`;

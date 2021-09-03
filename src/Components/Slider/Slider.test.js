@@ -9,17 +9,17 @@ const mockValues = [
   {
     episode_id: 1,
     title: "teste",
-    opening_crawl: "teste",
-    director: "teste",
-    producer: "producer",
+    opening_crawl: "star",
+    director: "stevie",
+    producer: "Loki",
     release_date: "1977-05-25",
   },
   {
     episode_id: 2,
-    title: "teste 2",
-    opening_crawl: "teste 2",
-    director: "teste 2",
-    producer: "producer 2",
+    title: "new moon",
+    opening_crawl: "another",
+    director: "samuel",
+    producer: "jojo",
     release_date: "1977-05-25",
   },
 ];
@@ -36,6 +36,15 @@ describe("Componente de Slider", () => {
       });
 
       expect(buttons).toHaveLength(2);
+    });
+    it("A lista de filmes e carregada no carousel", async () => {
+      fetchFilmes.mockResolvedValue(mockValues);
+
+      const { container } = render(<Slider />);
+
+      expect(await screen.findByText("teste")).toBeInTheDocument();
+
+      expect(container.querySelector("ul.slider").children.length).toBe(3);
     });
   });
 });
