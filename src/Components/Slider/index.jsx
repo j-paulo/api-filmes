@@ -9,12 +9,14 @@ import { fetchFilmes } from "../../api/api";
 import Loader from "../Loader/";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 
+export const ordencao = { changeOrdem: null };
+
 const Slider = () => {
   const [selectedItem, setSelectedItem] = useState(0);
   const [filmes, setFilmes] = useState([]);
   const { promiseInProgress } = usePromiseTracker();
 
-  const changeOrdem = (ordem) => {
+  ordencao.changeOrdem = (ordem) => {
     let filmesOrdenados = filmes.sort((a, b) => a.episode_id - b.episode_id);
 
     if (ordem === "lancamento") {
@@ -73,12 +75,12 @@ const Slider = () => {
           ) : (
             <>
               <Botao
-                onClick={() => changeOrdem("cronologica")}
+                onClick={() => ordencao.changeOrdem("cronologica")}
                 style={{ marginRight: "25px" }}
               >
                 - Ordem Cronologica -
               </Botao>
-              <Botao onClick={() => changeOrdem("lancamento")}>
+              <Botao onClick={() => ordencao.changeOrdem("lancamento")}>
                 - Ordem de Lancamento -
               </Botao>
             </>
