@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
 import Conteudo from "../Conteudo";
 import imgCapa from "../../assets/images/capa.png";
 import imgCapaMobile from "../../assets/images/capamobile.jpg";
 import { BoxConteudo, Titulo, Texto, Botao, Image } from "../UI";
+import { fetchFilmes } from "../../api/api";
+import Loader from "../Loader/";
+import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 
-const Slider = ({ filmes, setFilmes }) => {
+const Slider = () => {
   const [selectedItem, setSelectedItem] = useState(0);
+  const [filmes, setFilmes] = useState([]);
+  const { promiseInProgress } = usePromiseTracker();
 
   const changeOrdem = (ordem) => {
     let filmesOrdenados = filmes.sort((a, b) => a.episode_id - b.episode_id);
@@ -23,6 +28,22 @@ const Slider = ({ filmes, setFilmes }) => {
     setFilmes([...filmesOrdenados]);
     setSelectedItem(selectedItem + 1);
   };
+
+  useEffect(() => {
+    let mounted = true;
+
+    const getFilmes = async () => {
+      const data = await fetchFilmes();
+
+      if (mounted) setFilmes(data);
+    };
+
+    trackPromise(getFilmes());
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   return (
     <Carousel
@@ -47,15 +68,21 @@ const Slider = ({ filmes, setFilmes }) => {
             <br />
             Selecione abaixo a ordem em que deseja exibir os filmes:
           </Texto>
-          <Botao
-            onClick={() => changeOrdem("cronologica")}
-            style={{ marginRight: "25px" }}
-          >
-            - Ordem Cronologica -
-          </Botao>
-          <Botao onClick={() => changeOrdem("lancamento")}>
-            - Ordem de Lancamento -
-          </Botao>
+          {promiseInProgress === true ? (
+            <Loader />
+          ) : (
+            <>
+              <Botao
+                onClick={() => changeOrdem("cronologica")}
+                style={{ marginRight: "25px" }}
+              >
+                - Ordem Cronologica -
+              </Botao>
+              <Botao onClick={() => changeOrdem("lancamento")}>
+                - Ordem de Lancamento -
+              </Botao>
+            </>
+          )}
         </BoxConteudo>
         <Image className="desk" src={imgCapa} alt="" />
         <Image className="mobile" src={imgCapaMobile} alt="" />

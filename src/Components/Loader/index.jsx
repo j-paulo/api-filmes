@@ -2,22 +2,21 @@ import React from "react";
 import { HalfCircleSpinner } from "react-epic-spinners";
 import styled from "styled-components";
 
-const Spinner = styled(HalfCircleSpinner)`
-  margin: 0 auto;
-  top: 42%;
-  left: 48%;
-  position: absolute;
+const Container = styled.div`
+  text-align: center;
+  width: 50%;
+`;
 
-  @media (max-width: 425px) {
-    left: 42%;
-  }
+const Spinner = styled(HalfCircleSpinner)`
+  margin: 50px auto 20px auto;
 `;
 
 const Loader = () => {
   return (
-    <div data-testid="spinner">
+    <Container data-testid="spinner">
       <Spinner />
-    </div>
+      Carregando filmes...
+    </Container>
   );
 };
 

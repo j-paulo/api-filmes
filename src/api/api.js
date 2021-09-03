@@ -7,5 +7,5 @@ const api = axios.create({
 export const fetchFilmes = async (url = "films") => {
   const resposta = await api.get(url);
 
-  return resposta.data;
+  return resposta.data.results;
 };
