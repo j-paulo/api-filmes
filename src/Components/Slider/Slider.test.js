@@ -33,8 +33,8 @@ const mockValues = [
 ];
 
 describe("Componente de Slider", () => {
-  describe("Quando o componente e montado", () => {
-    it("Os botoes de ordenacao sao exibidos apos o conteudo da API ser carregado", async () => {
+  describe("Quando o componente é montado", () => {
+    it("Os botoes de ordenação são exibidos após o conteúdo da API ser carregado", async () => {
       fetchFilmes.mockResolvedValue(mockValues);
 
       render(<Slider />);
@@ -45,7 +45,7 @@ describe("Componente de Slider", () => {
 
       expect(buttons).toHaveLength(2);
     });
-    it("A lista de filmes e carregada no carousel", async () => {
+    it("A lista de filmes é carregada no carousel", async () => {
       fetchFilmes.mockResolvedValue(mockValues);
 
       const { container } = render(<Slider />);
@@ -55,14 +55,14 @@ describe("Componente de Slider", () => {
       expect(container.querySelector("ul.slider").children.length).toBe(4);
     });
   });
-  describe("Quando eu clico no botao", () => {
-    it("a funcao de ordenacao e executada", async () => {
+  describe("Quando eu clico no botão", () => {
+    it("a função de ordenação é executada", async () => {
       fetchFilmes.mockResolvedValue(mockValues);
 
       render(<Slider />);
 
       const button = await screen.findByRole("button", {
-        name: /ordem cronologica/i,
+        name: /ordem cronológica/i,
       });
 
       const changeOrdem = jest.spyOn(ordencao, "changeOrdem");
@@ -77,7 +77,7 @@ describe("Componente de Slider", () => {
       const { container } = render(<Slider />);
 
       const button = await screen.findByRole("button", {
-        name: /ordem cronologica/i,
+        name: /ordem cronológica/i,
       });
 
       fireEvent.click(button);
@@ -87,14 +87,14 @@ describe("Componente de Slider", () => {
       expect(itemContent).toHaveTextContent("test");
     });
 
-    describe("por ordem de lancamento", () => {
-      it("os filmes sao ordenados por lancamento", async () => {
+    describe("por ordem de lançamento", () => {
+      it("os filmes são ordenados por lançamento", async () => {
         fetchFilmes.mockResolvedValue(mockValues);
 
         const { container } = render(<Slider />);
 
         const button = await screen.findByRole("button", {
-          name: /ordem de lancamento/i,
+          name: /ordem de lançamento/i,
         });
 
         fireEvent.click(button);
@@ -102,14 +102,14 @@ describe("Componente de Slider", () => {
         expect(container).toMatchSnapshot();
       });
     });
-    describe("por ordem cronologica", () => {
-      it("os filmes sao ordenados por ordem cronologica", async () => {
+    describe("por ordem cronológica", () => {
+      it("os filmes são ordenados por ordem cronológica", async () => {
         fetchFilmes.mockResolvedValue(mockValues);
 
         const { container } = render(<Slider />);
 
         const button = await screen.findByRole("button", {
-          name: /ordem cronologica/i,
+          name: /ordem cronológica/i,
         });
 
         fireEvent.click(button);

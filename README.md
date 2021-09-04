@@ -1,17 +1,17 @@
 # api-filmes
 
-Projeto criado utilizando a [API SWAPI](https://swapi.dev/) (Star Wars API). Desenvolvido de forma a listar os filmes da franquia com navegacao simples atraves de slides e imagens.
+Projeto criado utilizando a [API SWAPI](https://swapi.dev/) (Star Wars API). Desenvolvido de forma a listar os filmes da franquia com navegação simples atraves de slides e imagens.
 
 ## Features
 
 - Carousel com imagens e dados dos filmes
-- Botoes para ordenar os filmes de forma cronologica ou de lancamento
+- Botões para ordenar os filmes de forma cronologica ou de lançamento
 - Switcher para mudar o tema do site
 - Responsivo
 
 ## Setup
 
-Clone o repositorio e instale as dependencias usando:
+Clone o repositório e instale as dependencias usando:
 
 ```sh
 npm install
@@ -19,7 +19,7 @@ npm install
 
 ## Testes automatizados
 
-Voce pode rodar os testes da aplicacao chamando:
+Você pode rodar os testes da aplicação chamando:
 
 ```sh
 npm test

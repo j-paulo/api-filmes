@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Componente de Conteudo dos Filmes O snapshot do componente sera sempre o mesmo 1`] = `
+exports[`Componente de Conteúdo dos Filmes O snapshot do componente será sempre o mesmo 1`] = `
 <div>
   <div
     class="sc-bdfBQB iqGwor"
@@ -45,7 +45,7 @@ exports[`Componente de Conteudo dos Filmes O snapshot do componente sera sempre 
     <span
       class="sc-gKseQn jmSvDS"
     >
-      Data de lancamento: 
+      Data de lançamento: 
       <font>
         24/05/1977
       </font>

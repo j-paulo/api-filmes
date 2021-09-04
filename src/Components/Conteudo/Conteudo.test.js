@@ -2,8 +2,8 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Conteudo from ".";
 
-describe("Componente de Conteudo dos Filmes", () => {
-  it("O snapshot do componente sera sempre o mesmo", () => {
+describe("Componente de Conteúdo dos Filmes", () => {
+  it("O snapshot do componente será sempre o mesmo", () => {
     const filme = {
       title: "teste",
       opening_crawl: "star",

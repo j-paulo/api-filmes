@@ -105,7 +105,7 @@ const Conteudo = ({ filme }) => {
         </Infos>
         <br />
         <Infos>
-          Data de lancamento: <font>{formatDate(filme.release_date)}</font>
+          Data de lançamento: <font>{formatDate(filme.release_date)}</font>
         </Infos>
         <br />
       </BoxInfo>

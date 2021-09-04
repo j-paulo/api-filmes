@@ -19,7 +19,7 @@ const Slider = () => {
   ordencao.changeOrdem = (ordem) => {
     let filmesOrdenados = filmes.sort((a, b) => a.episode_id - b.episode_id);
 
-    if (ordem === "lancamento") {
+    if (ordem === "lançamento") {
       const metadeFilmes = filmesOrdenados.length / 2;
       const primeirosFilmes = filmesOrdenados.slice(0, metadeFilmes);
       const ultimosFilmes = filmesOrdenados.slice(metadeFilmes);
@@ -59,14 +59,14 @@ const Slider = () => {
         <BoxConteudo>
           <Titulo>Filmoteca Star Wars</Titulo>
           <Texto>
-            Seja bem vindo ao maior acervo de filmes da obra maxima de George
+            Seja bem vindo ao maior acervo de filmes da obra máxima de George
             Lucas!
           </Texto>
           <Texto>
-            Aqui voce encontrara tudo sobre uma das maiores franquias do cinema!
+            Aqui você encontrará tudo sobre uma das maiores franquias do cinema!
           </Texto>
           <Texto>
-            Vamos comecar?
+            Vamos começar?
             <br />
             Selecione abaixo a ordem em que deseja exibir os filmes:
           </Texto>
@@ -75,13 +75,13 @@ const Slider = () => {
           ) : (
             <>
               <Botao
-                onClick={() => ordencao.changeOrdem("cronologica")}
+                onClick={() => ordencao.changeOrdem("cronológica")}
                 style={{ marginRight: "25px" }}
               >
-                - Ordem Cronologica -
+                - Ordem Cronológica -
               </Botao>
-              <Botao onClick={() => ordencao.changeOrdem("lancamento")}>
-                - Ordem de Lancamento -
+              <Botao onClick={() => ordencao.changeOrdem("lançamento")}>
+                - Ordem de Lançamento -
               </Botao>
             </>
           )}

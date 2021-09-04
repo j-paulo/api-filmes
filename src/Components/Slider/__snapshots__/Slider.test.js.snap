@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os filmes sao ordenados por ordem cronologica 1`] = `
+exports[`Componente de Slider Quando eu clico no botão por ordem cronológica os filmes são ordenados por ordem cronológica 1`] = `
 <div>
   <div
     class="carousel-root"
@@ -69,17 +69,17 @@ exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os 
                 <p
                   class="sc-dlfnuX cSnlMk"
                 >
-                  Seja bem vindo ao maior acervo de filmes da obra maxima de George Lucas!
+                  Seja bem vindo ao maior acervo de filmes da obra máxima de George Lucas!
                 </p>
                 <p
                   class="sc-dlfnuX cSnlMk"
                 >
-                  Aqui voce encontrara tudo sobre uma das maiores franquias do cinema!
+                  Aqui você encontrará tudo sobre uma das maiores franquias do cinema!
                 </p>
                 <p
                   class="sc-dlfnuX cSnlMk"
                 >
-                  Vamos comecar?
+                  Vamos começar?
                   <br />
                   Selecione abaixo a ordem em que deseja exibir os filmes:
                 </p>
@@ -87,12 +87,12 @@ exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os 
                   class="sc-hKgJUU hLjuup"
                   style="margin-right: 25px;"
                 >
-                  - Ordem Cronologica -
+                  - Ordem Cronológica -
                 </button>
                 <button
                   class="sc-hKgJUU hLjuup"
                 >
-                  - Ordem de Lancamento -
+                  - Ordem de Lançamento -
                 </button>
               </div>
               <img
@@ -154,7 +154,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os 
                 <span
                   class="sc-gKseQn jmSvDS"
                 >
-                  Data de lancamento: 
+                  Data de lançamento: 
                   <font>
                     24/05/1977
                   </font>
@@ -220,7 +220,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os 
                 <span
                   class="sc-gKseQn jmSvDS"
                 >
-                  Data de lancamento: 
+                  Data de lançamento: 
                   <font>
                     24/05/1977
                   </font>
@@ -286,7 +286,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os 
                 <span
                   class="sc-gKseQn jmSvDS"
                 >
-                  Data de lancamento: 
+                  Data de lançamento: 
                   <font>
                     24/05/1977
                   </font>
@@ -317,7 +317,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem cronologica os 
 </div>
 `;
 
-exports[`Componente de Slider Quando eu clico no botao por ordem de lancamento os filmes sao ordenados por lancamento 1`] = `
+exports[`Componente de Slider Quando eu clico no botão por ordem de lançamento os filmes são ordenados por lançamento 1`] = `
 <div>
   <div
     class="carousel-root"
@@ -386,17 +386,17 @@ exports[`Componente de Slider Quando eu clico no botao por ordem de lancamento o
                 <p
                   class="sc-dlfnuX cSnlMk"
                 >
-                  Seja bem vindo ao maior acervo de filmes da obra maxima de George Lucas!
+                  Seja bem vindo ao maior acervo de filmes da obra máxima de George Lucas!
                 </p>
                 <p
                   class="sc-dlfnuX cSnlMk"
                 >
-                  Aqui voce encontrara tudo sobre uma das maiores franquias do cinema!
+                  Aqui você encontrará tudo sobre uma das maiores franquias do cinema!
                 </p>
                 <p
                   class="sc-dlfnuX cSnlMk"
                 >
-                  Vamos comecar?
+                  Vamos começar?
                   <br />
                   Selecione abaixo a ordem em que deseja exibir os filmes:
                 </p>
@@ -404,12 +404,12 @@ exports[`Componente de Slider Quando eu clico no botao por ordem de lancamento o
                   class="sc-hKgJUU hLjuup"
                   style="margin-right: 25px;"
                 >
-                  - Ordem Cronologica -
+                  - Ordem Cronológica -
                 </button>
                 <button
                   class="sc-hKgJUU hLjuup"
                 >
-                  - Ordem de Lancamento -
+                  - Ordem de Lançamento -
                 </button>
               </div>
               <img
@@ -471,7 +471,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem de lancamento o
                 <span
                   class="sc-gKseQn jmSvDS"
                 >
-                  Data de lancamento: 
+                  Data de lançamento: 
                   <font>
                     24/05/1977
                   </font>
@@ -537,7 +537,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem de lancamento o
                 <span
                   class="sc-gKseQn jmSvDS"
                 >
-                  Data de lancamento: 
+                  Data de lançamento: 
                   <font>
                     24/05/1977
                   </font>
@@ -603,7 +603,7 @@ exports[`Componente de Slider Quando eu clico no botao por ordem de lancamento o
                 <span
                   class="sc-gKseQn jmSvDS"
                 >
-                  Data de lancamento: 
+                  Data de lançamento: 
                   <font>
                     24/05/1977
                   </font>
