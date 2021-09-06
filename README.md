@@ -5,7 +5,7 @@ Projeto criado utilizando a [API SWAPI](https://swapi.dev/) (Star Wars API). Des
 ## Features
 
 - Carousel com imagens e dados dos filmes
-- Botões para ordenar os filmes de forma cronologica ou de lançamento
+- Botões para ordenar os filmes de forma cronológica ou de lançamento
 - Switcher para mudar o tema do site
 - Responsivo
 
@@ -15,6 +15,12 @@ Clone o repositório e instale as dependencias usando:
 
 ```sh
 npm install
+```
+
+Para rodar a aplicação:
+
+```sh
+npm start
 ```
 
 ## Testes automatizados
